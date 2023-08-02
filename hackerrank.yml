@@ -1,0 +1,36 @@
+version: 1.0
+configuration:
+  has_webserver: true
+  scoring:
+    command: "npm test"
+    files:
+      - junit.xml
+    testcase_weights:
+        Rating Component Initial Setup should render the stars correctly on init: 0.06
+        Rating Component Hovering Star should fill all the stars upto the hover index on hover: 0.04
+        Rating Component Hovering Star should revert back when the mouse is moved away from the star: 0.04
+        Rating Component Persist State on Click should persist the rating on clicking on a icon: 0.04
+        Rating Component Persist State on Click should reset the value when clicking on a icon again: 0.04
+        Rating Component Custom Icons should accept a custom svg icon set and implement it correctly: 0.06
+        Rating Component Optimistic Toggle should set the initial value for the component based on the prop value passed: 0.06
+        Rating Component Optimistic Toggle should update the value of the rating if the prop value changes: 0.06
+        Rating Component Half Ratings should accept half ratings when prop steps is passed as 0.5: 0.06
+        Rating Component Half Ratings should implement hover in on left side for half ratings: 0.06
+        Rating Component Half Ratings should implement hover in on right side for half ratings: 0.06
+        Rating Component Half Ratings should implement hover out for half ratings: 0.06
+        Rating Component Half Ratings should persist half ratings on click: 0.06
+        Rating Component Accessibility should increase the value when right arrow is clicked: 0.06
+        Rating Component Accessibility should increase the value by 0.5 in half ratings mode when right arrow is clicked: 0.06
+        Rating Component Accessibility should decrease the value when left arrow is clicked: 0.06
+        Rating Component Accessibility should decrease the value by 0.5 in half ratings mode when left arrow is clicked: 0.06
+        Rating Component Accessibility should update the value when a numeric key is pressed: 0.06
+  readonly_paths:
+    - src/components/Rating.test.js
+  ide_config:
+    default_open_files:
+      - src/App.js
+      - src/components/Rating.js
+    project_menu:
+      run: npm start
+      install: npm install
+      test: npm test
